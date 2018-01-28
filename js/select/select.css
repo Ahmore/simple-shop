@@ -1,0 +1,16 @@
+.select-container						{ position: relative; display: block; float: left; color: black; }
+.select-customSelect-text				{ position: relative; background-color: white; border: 1px solid lightblue; padding: 2px;/* box-shadow: 0 -2px 0 0 #F0F5FA inset !important; */ }
+.select-customSelect-text.active		{ box-shadow: 0 3px 23px 0 #DDE0E4 inset !important; }
+.select-customSelect-text-text			{ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-break: break-all; height: inherit; line-height: 20px; }
+.select-customSelect-arrow				{ width: 21px; }
+.select-customSelect-arrow:before		{ content: "\25BE"; color: lightblue; display: block; height: 21px; position: absolute; right: 0px; text-align: center; top: 0px; width: 21px;
+										  padding: 2px; border-left: 1px solid lightblue; line-height: 20px; }
+.select-customSelect-arrow.active:before{ content: "\25B4"; }
+.select-customSelect 					{ left: 0; position: absolute; top: 0; cursor: pointer; }
+.select-customSelect-options			{ background-color: white; display: none; list-style-type: none; margin: 0; overflow: auto; padding: 0; max-height: 100px; 
+										  border: 1px solid lightblue; border-width: 0px 1px 1px 1px; position: relative; z-index: 1000; }
+.select-customSelect-option				{ height: 25px; line-height: 24px; padding-left: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-break: break-all; }
+	
+	
+.select-customSelect-option:hover		{ background-color: lightblue; }
+.select-customSelect-option.active		{ background-color: lightblue; }

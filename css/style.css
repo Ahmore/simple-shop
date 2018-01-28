@@ -1,0 +1,264 @@
+/*
+ *
+ *** Struktura aplikacji ***
+ *
+ */
+body				{ font-family: Verdana; background-color: white; border: 1px solid #2A5170; margin: 50px auto 20px auto; padding: 0px; width: 1200px; }
+a					{ text-decoration: none; color: inherit; }
+#page-name			{ font-size: 22pt; text-align: center; margin-bottom: 30px; color: #2A5170; }
+.link				{ color: #2A5170; }
+.link:hover			{ text-decoration: underline; }
+.link-active		{ text-decoration: underline; }
+.left				{ float: left; }
+.right				{ float: right; }
+
+.info				{ /* background-color: #ADD8E6;  */border: 2px solid #2A5170; color: #2A5170; font-size: 9pt; margin: 0 auto; overflow: auto; padding: 10px; width: 475px; 
+					  font-weight: 9pt; color: black; padding-top: 10px; }
+.info:before		{ content: "Informacja"; display: block; border-bottom: 1px solid; padding-bottom: 10px; text-align: center; font-size: 12pt; font-weight: bold;
+					  margin-bottom: 10px; }
+
+
+.error				{ width: 500px; border: 2px solid red; background-color: white; margin: 0 auto; overflow: auto; padding: 10px; font-size: 12pt; }
+.error li				{ list-style-type: square; margin-top: 10px; margin-left: 15px; color: #2A5170; }
+.error a				{ font-size: 9pt !important; }
+.error-header		{ border-bottom: 1px solid #2A5170; padding-bottom: 10px; text-align: center; font-weight: bold; }
+.error-message		{ padding-top: 10px; font-size: 8pt; }
+
+/*
+ *
+ *** Nagłówek ***
+ *
+ */
+#header				{ }
+#header-container	{ position: relative; color: white; background-color: #2A5170; border-bottom: 1px solid #2A5170; padding: 10px 0; height: 110px; }
+#header a			{ color: white; }
+#header-name		{ display: block; font-size: 21pt; height: 35px; margin: 0 auto; text-align: center; width: 350px; margin: 0 auto 30px; }
+#header-userinfo	{ position: absolute; top: 5px; right: 5px; font-size: 8pt; text-align: right; line-height: 12px; }
+
+
+
+#header-basket		{ float: right; overflow: auto; margin-right: 5px; }
+#header-basket a		{ float: left; height: 25px; line-height: 24px; width: 65px; }
+#header-basket div	{ float: left; font-size: 8pt; }
+
+#searchProduct								{ float: left; margin-left: 297px; }
+#searchProduct input[name="searchString"] 	{ border: 1px solid #ADD8E6; float: left; height: 22px; margin-right: -1px; width: 300px; font-size: 13pt; padding-left: 3px; 											   padding-right: 3px; }
+#searchProduct select[name="searchCategory"] 	{ width: 200px; height: 20px; }
+#searchProduct > input[type="submit"] 		{ background-color: #FFFFFF; border: 1px solid #ADD8E6;/*  box-shadow: 0 -2px 0 0 #F0F5FA inset !important; */ font-size: 13pt;
+											  height: 26px; margin-left: -1px; width: 100px; }
+
+#admin-panel					{ color: white; position: absolute; top: 0px; left: 0px; width: 100%; height: 40px; background-color: black; opacity: 0.7; }
+#admin-panel-name				{ float: left; display: inline-block; height: inherit; line-height: 39px; padding: 0px 15px; }
+#admin-panel a					{ display: block; float: left; margin: 0px; padding: 0px 5px; border-right: 1px solid white; margin-top: 12px; }
+#admin-panel a:last-child		{ border-right: none; }
+
+/*
+ *
+ *** Treść strony ***
+ *
+ */
+#content 				{ position: relative; overflow: auto; padding: 25px 0px; }
+#content-column-right	{ width: 960px; float: right; }
+#content-column-left	{ width: 240px; float: left; }
+
+
+
+/*
+ *
+ *** Stopka ***
+ *
+ */
+#footer					{ overflow: auto; color: white !important; background-color: #2A5170; border-top: 1px solid #2A5170; padding: 20px 0px; }
+#footer #page-name		{ margin-bottom: 0px; }
+
+
+
+/*
+ *
+ *** Wyszukiwanie ***
+ *
+ */
+.search-product-position				{ border-bottom: 1px solid #2A5170; margin: 0 auto; overflow: auto; padding: 10px 0; width: 1150px; }
+.search-product-position:last-child()	{ border-bottom: none; }
+.search-product-lp						{ float: left; font-size: 17pt; line-height: 80px; text-align: center; width: 50px; color: #2A5170; }
+.search-product-img						{ float: left; width: 80px; height: 80px; background-color: black; text-align: center; margin: 0 10px }
+.search-product-img	img					{ max-width: 100px; max-height: 100px; }
+.search-product-name					{ float: left; clear: right; width: 800px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.search-product-description				{ float: left; height: 54px; width: 800px; overflow: auto; margin-top: 10px; }
+.search-product-price					{ float: right; margin-bottom: 10px; margin-right: 10px; padding-left: 10px; width: 180px; text-align: right; }
+.search-product-price span				{ font-weight: bold; color: red; }
+.search-product-add						{ display: block; clear: right; float: right; margin-bottom: 10px; margin-right: 10px; padding-left: 10px; width: 180px; text-align: right; }
+#products-search-navigation				{ overflow: auto; text-align: center; margin-top: 25px; }
+#products-search-navigation > div  		{ display: inline-block; overflow: auto; }
+#products-search-navigation a 			{ float: left; margin: 0 3px; line-height: 21px; }
+#products-search-navigation form 			{ float: left; }
+#products-search-navigation input 		{ border: 1px solid #000000; float: left; padding: 1px 3px; text-align: right; width: 29px; }
+#products-search-navigation > div > div 	{ float: left; line-height: 21px; margin-left: 5px; }
+
+
+
+/*
+ *
+ *** Szczegóły leku ***
+ *
+ */
+#product-info-category	{ margin-left: 25px; font-size: 8pt; }
+#product-info-name		{ text-align: center; font-size: 22pt; margin-bottom: 25px; }
+#product-info-img		{ float: left; width: 300px; height: 300px; background-color: black; text-align: center; margin: 0 25px 25px; }
+#product-info-img img	{ max-width: 300px; max-height: 300px; }
+#product-info-info		{ float: left; }
+
+#product-info-buyLine						{ float: left; margin-bottom: 25px; overflow: auto; width: 815px; padding: 5px; border: 1px solid #2A5170; }
+#product-info-price							{ float: left; line-height: 25px; padding-left: 5px; }
+#product-info-price span						{ font-weight: bold; color: red; }
+#product-info-buyLine form					{ float: right; }
+#product-info-buyLine input[type="text"]		{ float: left; width: 50px; height: 23px; }
+#product-info-buyLine input[type="submit"]	{ float: left; width: 200px; }
+
+
+#product-info-description					{ float: left; width: 825px; height: 239px; }
+#btn-productEdit							{ position: absolute; top: 10px; right: 10px; }
+
+
+
+/*
+ *
+ *** Guziki i inputy ***
+ *
+ */
+.btn-return			{ display: block; clear: both; float: left; margin-left: 25px; }
+.btn-acount-edit	{ display: block; position: absolute; top: 0px; right: 0px; }
+.btn-submit			{ width: 100px; height: 25px; border: 1px solid #2A5170; color: white; font-weight: bold; background-color: #2A5170; }
+.btn-submit:active	{ box-shadow: 1px 1px 3px white inset; }
+.btn-submit-basket	{ margin-right: 25px; }
+.input-text			{ border: 1px solid #2A5170; color: #2A5170; font-size: 12pt; height: 25px; padding: 0 5px; width: 100px; }
+.textarea			{ border: 1px solid #2A5170; color: #2A5170; font-size: 12pt; height: 50px; padding: 5px; width: 100px; resize: none; }
+
+
+
+/*
+ *
+ *** Koszyk ***
+ *
+ */ 
+#basket-send-form				{ padding-left: 25px; }
+
+#basket-products-table			{ margin: 0 auto; width: 800px; border: 1px solid #2A5170; }
+#basket-products-table thead		{ color: white; background-color: #2A5170; }
+#basket-products-table thead th	{ padding: 5px; }
+#basket-products-table td		{ padding: 5px; }
+#basket-products-table tfoot,
+.basket-products-lp, 
+.basket-products-price, 
+.basket-products-amount, 
+.basket-products-value		{ text-align: right; }
+.basket-products-delete		{ text-align: center; }
+
+#basket-info						{ overflow: auto; width: 935px; position: relative; margin: 0 auto; }
+#basket-info .basket-info-line		{ overflow: auto; clear: both; padding: 3px 0; }
+#basket-info .basket-info-line > div	{ float: left; width: 230px; }
+#basket-info input[type="text"]		{ width: 200px; }
+#basket-info input[type="submit"]		{ width: 100px; height: 25px; float: right; }
+
+
+/*
+ *
+ *** Konto ***
+ *
+ */
+#account-login-form								{ margin: 0 auto 25px; padding: 10px; width: 347px; border: 1px solid #2A5170; }
+#account-login-form label 						{ clear: left; display: block; float: left; height: 29px; line-height: 29px; width: 145px; margin-bottom: 10px; }
+#account-login-form input[type="text"],
+#account-login-form input[type="password"]		{ float: left; width: 190px; }
+#account-login-form input[type="submit"]			{ width: 100%; height: 30px; }
+
+#account-register-form							{ margin: 0 auto 25px; padding: 10px; width: 347px; border: 1px solid #2A5170; color: #2A5170; }
+#account-register-form label 						{ clear: left; display: block; float: left; height: 29px; line-height: 29px; width: 145px; margin-bottom: 10px; }
+#account-register-form input[type="text"],
+#account-register-form input[type="password"]		{ float: left; width: 190px; }
+#account-register-form input[type="submit"]		{ width: 100%; height: 30px; }
+.register-error									{ float: left; font-size: 7pt; margin: 4px 0 10px; }
+
+#content-column-left > ul 		{ background-color: #2A5170; border: 1px solid #2A5170; color: #FFFFFF; margin: 0 auto; width: 190px; }
+#content-column-left li	 		{ padding: 5px 0px; cursor: pointer; }
+#content-column-left li:hover a	{ text-decoration: underline; }
+#content-column-left a	 		{ display: block; margin-left: 5px; color: #FFFFFF; }
+
+
+#account-info, #account-edit			{ overflow: auto; width: 935px; position: relative; }
+#account-info .account-info-line,
+#account-edit .account-edit-line			{ overflow: auto; clear: both; padding: 3px 0; }
+#account-info .account-info-line > div,
+#account-edit .account-edit-line > div	{ float: left; width: 230px; }
+#account-edit input[type="text"]			{ width: 200px; }
+#account-edit input[type="submit"]		{ width: 100px; height: 25px; float: right; }
+
+
+#account-order-table					{ margin: 0 auto; width: 800px; border: 1px solid #2A5170; }
+#account-order-table thead				{ color: white; background-color: #2A5170; }
+#account-order-table thead th				{ padding: 5px; }
+#account-order-table td					{ padding: 5px; }
+#account-order-table tfoot				{ padding: 5px; }
+#account-order-table tfoot,
+.account-order-lp, 
+.account-order-price, 
+.account-order-amount, 
+.account-order-value					{ text-align: right; }
+
+
+
+/*
+ *
+ *** Panel administratora ***
+ *
+ */
+ 
+.account-admin-category-line						{ border-bottom: 1px solid #2A5170; margin: 0 auto; overflow: auto; padding: 10px 0; width: 470px; line-height: 25px; }
+.account-admin-category-line:last-child				{ border-bottom: none; }
+.account-admin-lp									{ float: left; font-size: 17pt; text-align: center; width: 50px; color: #2A5170; }
+.account-admin-name									{ float: left; clear: right; width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.account-admin-edit									{ float: left; padding-right: 5px; }
+.account-admin-delete								{ float: left; padding-left: 5px; border-left: 1px solid #2A5170; }
+#btn-categoryAdd									{ position: absolute; top: 10px; right: 10px; }
+ 
+ 
+#admin-categoryAdd-form								{ margin: 0 auto 25px; padding: 10px; width: 347px; border: 1px solid #2A5170; color: #2A5170; }
+#admin-categoryAdd-form label 						{ clear: left; display: block; float: left; height: 29px; line-height: 29px; width: 145px; margin-bottom: 10px; }
+#admin-categoryAdd-form input[type="text"],
+#admin-categoryAdd-form input[type="password"]		{ float: left; width: 190px; }
+#admin-categoryAdd-form input[type="submit"]			{ width: 100%; height: 30px; }
+
+#admin-categoryEdit-form							{ margin: 0 auto 25px; padding: 10px; width: 347px; border: 1px solid #2A5170; color: #2A5170; }
+#admin-categoryEdit-form label 						{ clear: left; display: block; float: left; height: 29px; line-height: 29px; width: 145px; margin-bottom: 10px; }
+#admin-categoryEdit-form input[type="text"],
+#admin-categoryEdit-form input[type="password"]		{ float: left; width: 190px; }
+#admin-categoryEdit-form input[type="submit"]			{ width: 100%; height: 30px; }
+
+#admin-productAdd-form								{ margin: 0 auto 25px; padding: 10px; width: 447px; border: 1px solid #2A5170; color: #2A5170; }
+#admin-productAdd-form label 							{ clear: left; display: block; float: left; height: 29px; line-height: 29px; width: 145px; margin-bottom: 10px; }
+#admin-productAdd-form input[type="text"],
+#admin-productAdd-form input[type="password"]			{ float: left; width: 290px; }
+#admin-productAdd-form input[type="submit"]			{ width: 100%; height: 30px; }
+#admin-productAdd-form textarea						{ float: left; width: 290px; height: 75px; margin-bottom: 10px; }
+#admin-productAdd-form select							{ float: left; width: 296px; }
+#admin-productAdd-form .select-customSelect-text		{ border-color: #2A5170 !important }
+#admin-productAdd-form .select-customSelect-arrow:before		{ border-color: #2A5170 !important; color: #2A5170 !important; }
+
+#admin-productEdit-form								{ margin: 0 auto 25px; padding: 10px; width: 447px; border: 1px solid #2A5170; color: #2A5170; }
+#admin-productEdit-form label 						{ clear: left; display: block; float: left; height: 29px; line-height: 29px; width: 145px; margin-bottom: 10px; }
+#admin-productEdit-form input[type="text"],
+#admin-productEdit-form input[type="password"]		{ float: left; width: 290px; }
+#admin-productEdit-form input[type="submit"]			{ width: 100%; height: 30px; }
+#admin-productEdit-form textarea						{ float: left; width: 290px; height: 75px; margin-bottom: 10px; }
+#admin-productEdit-form select						{ float: left; width: 296px; }
+#admin-productEdit-form .select-customSelect-text	{ border-color: #2A5170 !important }
+#admin-productEdit-form .select-customSelect-arrow:before		{ border-color: #2A5170 !important; color: #2A5170 !important; }
+
+#admin-newOrders-table			{ margin: 0 auto; width: 800px; border: 1px solid #2A5170; }
+#admin-newOrders-table thead		{ color: white; background-color: #2A5170; }
+#admin-newOrders-table thead th	{ padding: 5px; }
+#admin-newOrders-table td		{ padding: 5px; }
+#admin-newOrders-table tfoot,
+.admin-newOrders-lp, 
+.admin-newOrders-value			{ text-align: right; }
+.admin-newOrders-date			{ text-align: center; }
